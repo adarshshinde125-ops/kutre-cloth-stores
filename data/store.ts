@@ -297,7 +297,7 @@ export const products: Product[] = [
     sizes: [],
     theme: "linear-gradient(135deg, #b63258, #f1a24f)"
     ,
-    image: "/saree-signature.svg"
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "kurti-1",
@@ -318,7 +318,7 @@ export const products: Product[] = [
     price: 899,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #915f95, #f3c6b4)",
-    image: "/kurti-modern.svg"
+    image: "https://images.unsplash.com/photo-1583391733981-8496f31734e3?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "frock-1",
@@ -339,7 +339,7 @@ export const products: Product[] = [
     price: 799,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ff907a, #ffd57d)",
-    image: "/frock-modern.svg"
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "kids-1",
@@ -360,7 +360,7 @@ export const products: Product[] = [
     price: 699,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #438d80, #bee5a6)",
-    image: "/kids-festive.svg"
+    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "tops-1",
@@ -381,7 +381,7 @@ export const products: Product[] = [
     price: 549,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ca4d73, #f9c884)",
-    image: "/tops-modern.svg"
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "leggings-1",
@@ -402,6 +402,6 @@ export const products: Product[] = [
     price: 399,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #424d88, #91c8e4)",
-    image: "/leggings-modern.svg"
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
   }
 ];
