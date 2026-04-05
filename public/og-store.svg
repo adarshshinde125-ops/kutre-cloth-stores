@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FFF7EF"/>
+  <rect x="34" y="34" width="1132" height="562" rx="44" fill="url(#paint0_linear)"/>
+  <circle cx="860" cy="220" r="128" fill="rgba(255,244,233,0.72)"/>
+  <circle cx="950" cy="320" r="86" fill="rgba(255,244,233,0.3)"/>
+  <path d="M100 173C100 153.118 116.118 137 136 137H430C449.882 137 466 153.118 466 173V176C466 195.882 449.882 212 430 212H136C116.118 212 100 195.882 100 176V173Z" fill="#7A2F28"/>
+  <path d="M125 174H441" stroke="#FFF4E9" stroke-width="11" stroke-linecap="round"/>
+  <path d="M173 174H394" stroke="#F3C46F" stroke-width="11" stroke-linecap="round"/>
+  <text x="98" y="292" fill="#FFF9F3" font-family="Georgia, serif" font-size="78" font-weight="700">Kutre Cloth Stores</text>
+  <text x="100" y="362" fill="#FFF1E5" font-family="Arial, sans-serif" font-size="34">Ladies and kids garments with WhatsApp ordering</text>
+  <text x="100" y="421" fill="#FFE6D2" font-family="Arial, sans-serif" font-size="28">Sarees, Kurtis, Frocks, Kids Wear, Tops, Leggings</text>
+  <rect x="101" y="472" width="286" height="66" rx="33" fill="#FFF4E9"/>
+  <text x="143" y="515" fill="#7A2F28" font-family="Arial, sans-serif" font-size="28" font-weight="700">Kolhapur • WhatsApp Orders</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="74" y1="74" x2="1110" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7483F"/>
+      <stop offset="1" stop-color="#E6A74D"/>
+    </linearGradient>
+  </defs>
+</svg>
