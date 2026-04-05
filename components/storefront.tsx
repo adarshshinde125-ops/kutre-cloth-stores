@@ -409,9 +409,7 @@ export function Storefront() {
                         sizes="(max-width: 980px) 100vw, 40vw"
                         className="product-photo"
                       />
-                    </div>
-                    <div className="product-visual visual-pattern" style={{ background: product.theme }}>
-                      <div className="product-card-top">
+                      <div className="product-card-top product-card-overlay">
                         <span className="product-badge">
                           {dictionary.productCategories[product.key]}
                         </span>

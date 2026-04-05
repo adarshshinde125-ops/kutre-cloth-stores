@@ -777,17 +777,6 @@ button {
   border-color: rgba(187, 82, 65, 0.16);
 }
 
-.product-visual {
-  min-height: 240px;
-  border-radius: 22px;
-  padding: 16px;
-  display: flex;
-  align-items: start;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-}
-
 .product-image-wrap {
   position: relative;
   overflow: hidden;
@@ -796,7 +785,7 @@ button {
 }
 
 .product-image-home {
-  min-height: 280px;
+  min-height: 320px;
   margin-bottom: 14px;
 }
 
@@ -805,36 +794,21 @@ button {
 }
 
 .product-card-top {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  width: 100%;
+  inset: 16px 16px auto 16px;
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 12px;
 }
 
-.visual-pattern::before,
-.visual-pattern::after {
+.product-card-overlay::after {
   content: "";
   position: absolute;
-  border-radius: 50%;
-}
-
-.visual-pattern::before {
-  width: 120px;
-  height: 120px;
-  top: -16px;
-  right: -18px;
-  background: rgba(255, 255, 255, 0.28);
-}
-
-.visual-pattern::after {
-  width: 94px;
-  height: 94px;
-  bottom: -10px;
-  left: -10px;
-  background: rgba(255, 255, 255, 0.18);
+  inset: -16px;
+  background: linear-gradient(180deg, rgba(16, 10, 8, 0.05), rgba(16, 10, 8, 0));
+  z-index: -1;
 }
 
 .product-badge,
