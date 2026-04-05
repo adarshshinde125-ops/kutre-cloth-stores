@@ -334,12 +334,69 @@ button {
   min-height: 300px;
   margin-top: 18px;
   border-radius: 24px;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.82), transparent 40%),
-    linear-gradient(180deg, #f5d7cc 0%, #f5e8d3 58%, #fbf5ee 100%);
   border: 1px solid rgba(255, 255, 255, 0.55);
   position: relative;
   overflow: hidden;
+}
+
+.hero-brand-panel {
+  min-height: 360px;
+}
+
+.hero-brand-overlay,
+.banner-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20, 10, 8, 0.06), rgba(20, 10, 8, 0.64)),
+    radial-gradient(circle at top right, rgba(228, 179, 95, 0.28), transparent 30%);
+}
+
+.hero-brand-copy,
+.banner-card-copy {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  color: #fff8f0;
+}
+
+.hero-brand-mark,
+.signature-label,
+.banner-card-copy span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.16);
+  border: 1px solid rgba(255, 248, 240, 0.24);
+  backdrop-filter: blur(10px);
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-brand-copy strong,
+.banner-card-copy strong,
+.signature-panel h3 {
+  display: block;
+  letter-spacing: -0.03em;
+}
+
+.hero-brand-copy strong {
+  margin-top: 14px;
+  font-size: 2rem;
+}
+
+.hero-brand-copy p {
+  margin: 10px 0 0;
+  max-width: 18ch;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 .art-tag {
@@ -360,57 +417,6 @@ button {
 .tag-two {
   right: 18px;
   bottom: 18px;
-}
-
-.art-glow,
-.art-swatch {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.art-glow {
-  filter: blur(28px);
-  opacity: 0.65;
-}
-
-.glow-one {
-  width: 160px;
-  height: 160px;
-  right: -12px;
-  top: -18px;
-  background: rgba(255, 255, 255, 0.65);
-}
-
-.glow-two {
-  width: 130px;
-  height: 130px;
-  left: 24px;
-  bottom: 28px;
-  background: rgba(228, 179, 95, 0.35);
-}
-
-.swatch-one {
-  width: 172px;
-  height: 228px;
-  left: 32px;
-  bottom: -32px;
-  background: linear-gradient(180deg, #d34155, #f1a85a);
-}
-
-.swatch-two {
-  width: 140px;
-  height: 210px;
-  right: 52px;
-  top: 48px;
-  background: linear-gradient(180deg, #6c8d77, #bad0a5);
-}
-
-.swatch-three {
-  width: 140px;
-  height: 140px;
-  right: 8px;
-  bottom: 34px;
-  background: linear-gradient(180deg, #fff2da, #e59f47);
 }
 
 .hero-card-copy {
@@ -503,6 +509,9 @@ button {
 
 .banner-copy {
   padding: 28px;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 245, 0.95), rgba(249, 236, 226, 0.9)),
+    rgba(255, 253, 250, 0.82);
 }
 
 .banner-copy h2 {
@@ -515,6 +524,50 @@ button {
   color: var(--muted);
   font-family: Arial, sans-serif;
   line-height: 1.7;
+}
+
+.signature-panel {
+  margin: 20px 0 0;
+  padding: 22px;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(36, 23, 21, 0.96), rgba(96, 45, 40, 0.9)),
+    linear-gradient(135deg, rgba(228, 179, 95, 0.24), rgba(187, 82, 65, 0.12));
+  color: #fff7ee;
+  box-shadow: 0 18px 36px rgba(36, 23, 21, 0.18);
+}
+
+.signature-label {
+  background: rgba(255, 248, 240, 0.12);
+  border-color: rgba(255, 248, 240, 0.2);
+}
+
+.signature-panel h3 {
+  margin: 14px 0 10px;
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.signature-panel p {
+  color: rgba(255, 247, 238, 0.86);
+}
+
+.signature-ribbons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.signature-ribbons span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 248, 240, 0.12);
+  border: 1px solid rgba(255, 248, 240, 0.16);
+  font-family: Arial, sans-serif;
+  font-weight: 700;
 }
 
 .banner-stack {
@@ -534,6 +587,12 @@ button {
   transform: translateY(26px);
 }
 
+.banner-card-copy strong {
+  margin-top: 12px;
+  font-size: 1.8rem;
+  max-width: 10ch;
+}
+
 .info-grid {
   grid-template-columns: repeat(3, 1fr);
   margin: 28px 0 24px;
@@ -542,6 +601,21 @@ button {
 .info-card {
   padding: 26px;
   border-radius: var(--radius-lg);
+}
+
+.section-image-wrap,
+.faq-image-wrap,
+.order-visual-card,
+.contact-hero-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f0e2d8;
+}
+
+.section-image-wrap {
+  min-height: 180px;
+  margin-bottom: 16px;
 }
 
 .info-card h3 {
@@ -900,6 +974,22 @@ button {
   padding: 18px 4px;
 }
 
+.order-visual-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.order-visual-card {
+  min-height: 220px;
+}
+
+.order-visual-card-small {
+  min-height: 180px;
+  transform: translateY(28px);
+}
+
 .order-copy h2,
 .contact-hero h1 {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
@@ -955,6 +1045,11 @@ button {
 .faq-card {
   padding: 22px;
   border-radius: var(--radius-lg);
+}
+
+.faq-image-wrap {
+  min-height: 180px;
+  margin-bottom: 16px;
 }
 
 .faq-card h3 {
@@ -1044,6 +1139,22 @@ button {
   padding: 32px 30px;
 }
 
+.contact-hero-gallery {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 16px;
+  margin: 22px 0 0;
+}
+
+.contact-hero-image {
+  min-height: 280px;
+}
+
+.contact-hero-image.small {
+  min-height: 220px;
+  transform: translateY(28px);
+}
+
 .contact-grid {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -1061,11 +1172,18 @@ button {
   .contact-grid,
   .faq-list,
   .hero-stats,
-  .product-detail-hero {
+  .product-detail-hero,
+  .order-visual-grid,
+  .contact-hero-gallery {
     grid-template-columns: 1fr;
   }
 
   .banner-card-two {
+    transform: none;
+  }
+
+  .order-visual-card-small,
+  .contact-hero-image.small {
     transform: none;
   }
 

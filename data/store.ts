@@ -126,6 +126,16 @@ export const translations = {
     bannerChipOne: "New styles every week",
     bannerChipTwo: "WhatsApp order confirmation",
     bannerChipThree: "Local store support",
+    signatureLabel: "Kutre Signature Edit",
+    signatureTitle: "Premium festive picks from your trusted local fashion store",
+    signatureText:
+      "Curated sarees, ladies wear, and kids styles with a warm boutique feel for festivals, family functions, and everyday shopping.",
+    signatureRibbonOne: "Nesari store favourite",
+    signatureRibbonTwo: "Festive colour stories",
+    bannerCardLabelOne: "Celebration Sarees",
+    bannerCardLabelTwo: "Kids Festive Looks",
+    bannerCardTagOne: "Boutique Finish",
+    bannerCardTagTwo: "Fresh Weekly Picks",
     detailTitle: "Product Details",
     detailBack: "Back to Home",
     detailOrder: "Order on WhatsApp",
@@ -241,6 +251,16 @@ export const translations = {
     bannerChipOne: "दर आठवड्याला नवीन स्टाइल्स",
     bannerChipTwo: "WhatsApp वर ऑर्डर कन्फर्मेशन",
     bannerChipThree: "स्थानिक दुकानाचा विश्वास",
+    signatureLabel: "Kutre Signature Edit",
+    signatureTitle: "विश्वासू स्थानिक फॅशन स्टोअरमधून उत्तम सणसुदीची निवड",
+    signatureText:
+      "साड्या, महिला वेअर आणि किड्स स्टाइल्स यांचे क्युरेटेड कलेक्शन सण, कुटुंब समारंभ आणि रोजच्या खरेदीसाठी.",
+    signatureRibbonOne: "नेसरीची आवडती निवड",
+    signatureRibbonTwo: "सणसुदीच्या रंगसंगती",
+    bannerCardLabelOne: "समारंभ साड्या",
+    bannerCardLabelTwo: "किड्स सणसुदी लूक्स",
+    bannerCardTagOne: "बुटीक फिनिश",
+    bannerCardTagTwo: "दर आठवड्याला नवीन स्टाइल्स",
     detailTitle: "प्रॉडक्ट तपशील",
     detailBack: "होमवर जा",
     detailOrder: "WhatsApp वर ऑर्डर करा",
@@ -277,7 +297,7 @@ export const products: Product[] = [
     sizes: [],
     theme: "linear-gradient(135deg, #b63258, #f1a24f)"
     ,
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+    image: "/saree-signature.svg"
   },
   {
     id: "kurti-1",
@@ -340,7 +360,7 @@ export const products: Product[] = [
     price: 699,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #438d80, #bee5a6)",
-    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80"
+    image: "/kids-festive.svg"
   },
   {
     id: "tops-1",

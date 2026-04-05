@@ -1,0 +1,34 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#2B1714"/>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="988" cy="196" r="240" fill="#F0C06A" fill-opacity="0.28"/>
+  <circle cx="248" cy="1234" r="300" fill="#8C3A38" fill-opacity="0.36"/>
+  <rect x="72" y="72" width="1056" height="1356" rx="48" fill="url(#frame)" stroke="rgba(255,248,240,0.24)"/>
+  <path d="M716 340C615 340 548 416 548 520V628C548 744 466 844 354 876L294 894V1016C294 1113 373 1192 470 1192H746C849 1192 932 1109 932 1006V876C932 778 864 693 769 668L698 649C631 632 584 571 584 502V486C584 430 626 384 682 384C744 384 794 434 794 496V572H920V496C920 410 851 340 765 340H716Z" fill="url(#saree)"/>
+  <path d="M667 372C616 372 574 414 574 465V643C574 744 507 833 412 862L327 888V1010C327 1088 390 1151 468 1151H741C819 1151 882 1088 882 1010V887L791 862C699 837 634 751 634 657V460C634 442 649 427 667 427C684 427 699 442 699 460V690H822V460C822 412 783 372 735 372H667Z" fill="#F7E3D0" fill-opacity="0.88"/>
+  <path d="M500 489C546 520 626 516 682 470" stroke="#8C3A38" stroke-width="22" stroke-linecap="round"/>
+  <path d="M454 610C535 665 692 662 776 602" stroke="#8C3A38" stroke-width="20" stroke-linecap="round" stroke-dasharray="1 44"/>
+  <path d="M414 770C535 837 698 829 814 751" stroke="#F0C06A" stroke-width="26" stroke-linecap="round"/>
+  <g opacity="0.88">
+    <rect x="124" y="118" width="248" height="52" rx="26" fill="#FFF4EA"/>
+    <text x="156" y="151" fill="#7E322E" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2">KUTRE SIGNATURE</text>
+  </g>
+  <text x="120" y="1270" fill="#FFF8F0" font-family="Georgia, serif" font-size="96" font-weight="700">Celebration Sarees</text>
+  <text x="120" y="1338" fill="#F9E2D4" font-family="Arial, sans-serif" font-size="34">Boutique-inspired festive drape for premium local storefront styling.</text>
+  <defs>
+    <linearGradient id="bg" x1="109" y1="67" x2="1052" y2="1437" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5E2420"/>
+      <stop offset="0.52" stop-color="#321917"/>
+      <stop offset="1" stop-color="#7D3833"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="130" y1="120" x2="1036" y2="1373" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B3B35" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#F0C06A" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="saree" x1="354" y1="377" x2="898" y2="1158" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A43946"/>
+      <stop offset="0.52" stop-color="#D76856"/>
+      <stop offset="1" stop-color="#F0B15E"/>
+    </linearGradient>
+  </defs>
+</svg>

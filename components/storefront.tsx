@@ -166,14 +166,22 @@ export function Storefront() {
 
           <div className="hero-card">
             <div className="hero-card-badge">{dictionary.featured}</div>
-            <div className="hero-card-art" aria-hidden="true">
-              <span className="art-tag tag-one">{dictionary.ladiesWear}</span>
+            <div className="hero-card-art hero-brand-panel">
+              <Image
+                src={products[0].image}
+                alt={products[0].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 36vw"
+                className="product-photo"
+              />
+              <div className="hero-brand-overlay" />
+              <div className="hero-brand-copy">
+                <span className="hero-brand-mark">{dictionary.signatureLabel}</span>
+                <strong>{dictionary.ladiesWear}</strong>
+                <p>{dictionary.signatureRibbonOne}</p>
+              </div>
+              <span className="art-tag tag-one">{dictionary.bannerCardTagOne}</span>
               <span className="art-tag tag-two">{dictionary.kidsWear}</span>
-              <div className="art-glow glow-one" />
-              <div className="art-glow glow-two" />
-              <div className="art-swatch swatch-one" />
-              <div className="art-swatch swatch-two" />
-              <div className="art-swatch swatch-three" />
             </div>
             <div className="hero-card-copy">
               <h3>{dictionary.heroCardTitle}</h3>
@@ -211,6 +219,15 @@ export function Storefront() {
             <p className="section-kicker">{dictionary.featured}</p>
             <h2>{dictionary.bannerTitle}</h2>
             <p>{dictionary.bannerText}</p>
+            <div className="signature-panel">
+              <span className="signature-label">{dictionary.signatureLabel}</span>
+              <h3>{dictionary.signatureTitle}</h3>
+              <p>{dictionary.signatureText}</p>
+              <div className="signature-ribbons">
+                <span>{dictionary.signatureRibbonOne}</span>
+                <span>{dictionary.signatureRibbonTwo}</span>
+              </div>
+            </div>
             <div className="trust-row">
               <span>{dictionary.bannerChipOne}</span>
               <span>{dictionary.bannerChipTwo}</span>
@@ -226,6 +243,11 @@ export function Storefront() {
                 sizes="(max-width: 980px) 100vw, 30vw"
                 className="product-photo"
               />
+              <div className="banner-card-overlay" />
+              <div className="banner-card-copy">
+                <span>{dictionary.bannerCardTagOne}</span>
+                <strong>{dictionary.bannerCardLabelOne}</strong>
+              </div>
             </div>
             <div className="banner-card banner-card-two">
               <Image
@@ -235,22 +257,54 @@ export function Storefront() {
                 sizes="(max-width: 980px) 100vw, 24vw"
                 className="product-photo"
               />
+              <div className="banner-card-overlay" />
+              <div className="banner-card-copy">
+                <span>{dictionary.bannerCardTagTwo}</span>
+                <strong>{dictionary.bannerCardLabelTwo}</strong>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="info-grid">
           <article className="info-card">
+            <div className="section-image-wrap">
+              <Image
+                src={products[1].image}
+                alt={products[1].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 30vw"
+                className="product-photo"
+              />
+            </div>
             <p className="info-label">{dictionary.visitUs}</p>
             <h3>{dictionary.addressTitle}</h3>
             <p>{dictionary.addressText}</p>
           </article>
           <article className="info-card">
+            <div className="section-image-wrap">
+              <Image
+                src={products[4].image}
+                alt={products[4].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 30vw"
+                className="product-photo"
+              />
+            </div>
             <p className="info-label">{dictionary.easyOrders}</p>
             <h3>{dictionary.orderModeTitle}</h3>
             <p>{dictionary.orderModeText}</p>
           </article>
           <article className="info-card">
+            <div className="section-image-wrap">
+              <Image
+                src={products[3].image}
+                alt={products[3].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 30vw"
+                className="product-photo"
+              />
+            </div>
             <p className="info-label">{dictionary.sizesAvailable}</p>
             <h3>{dictionary.sizeTitle}</h3>
             <p>{dictionary.sizeText}</p>
@@ -429,16 +483,43 @@ export function Storefront() {
           </div>
           <div className="info-grid">
             <article className="info-card">
+              <div className="section-image-wrap">
+                <Image
+                  src={products[0].image}
+                  alt={products[0].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <p className="info-label">01</p>
               <h3>{dictionary.benefitOneTitle}</h3>
               <p>{dictionary.benefitOneText}</p>
             </article>
             <article className="info-card">
+              <div className="section-image-wrap">
+                <Image
+                  src={products[2].image}
+                  alt={products[2].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <p className="info-label">02</p>
               <h3>{dictionary.benefitTwoTitle}</h3>
               <p>{dictionary.benefitTwoText}</p>
             </article>
             <article className="info-card">
+              <div className="section-image-wrap">
+                <Image
+                  src={products[5].image}
+                  alt={products[5].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <p className="info-label">03</p>
               <h3>{dictionary.benefitThreeTitle}</h3>
               <p>{dictionary.benefitThreeText}</p>
@@ -448,6 +529,26 @@ export function Storefront() {
 
         <section id="order" className="order-section">
           <div className="order-copy">
+            <div className="order-visual-grid">
+              <div className="order-visual-card">
+                <Image
+                  src={products[0].image}
+                  alt={products[0].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 40vw"
+                  className="product-photo"
+                />
+              </div>
+              <div className="order-visual-card order-visual-card-small">
+                <Image
+                  src={products[4].image}
+                  alt={products[4].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 24vw"
+                  className="product-photo"
+                />
+              </div>
+            </div>
             <p className="section-kicker">{dictionary.orderKicker}</p>
             <h2>{dictionary.orderTitle}</h2>
             <p>{dictionary.orderText}</p>
@@ -514,14 +615,41 @@ export function Storefront() {
 
           <div className="faq-list">
             <article className="faq-card">
+              <div className="faq-image-wrap">
+                <Image
+                  src={products[1].image}
+                  alt={products[1].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <h3>{dictionary.faqOneQuestion}</h3>
               <p>{dictionary.faqOneAnswer}</p>
             </article>
             <article className="faq-card">
+              <div className="faq-image-wrap">
+                <Image
+                  src={products[3].image}
+                  alt={products[3].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <h3>{dictionary.faqTwoQuestion}</h3>
               <p>{dictionary.faqTwoAnswer}</p>
             </article>
             <article className="faq-card">
+              <div className="faq-image-wrap">
+                <Image
+                  src={products[5].image}
+                  alt={products[5].names[language]}
+                  fill
+                  sizes="(max-width: 980px) 100vw, 30vw"
+                  className="product-photo"
+                />
+              </div>
               <h3>{dictionary.faqThreeQuestion}</h3>
               <p>{dictionary.faqThreeAnswer}</p>
             </article>
