@@ -318,7 +318,7 @@ export const products: Product[] = [
     price: 899,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #915f95, #f3c6b4)",
-    image: "https://images.unsplash.com/photo-1583391733981-8496f31734e3?auto=format&fit=crop&w=900&q=80"
+    image: "/kurti-modern.svg"
   },
   {
     id: "frock-1",
@@ -339,7 +339,7 @@ export const products: Product[] = [
     price: 799,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ff907a, #ffd57d)",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+    image: "/frock-modern.svg"
   },
   {
     id: "kids-1",
@@ -381,7 +381,7 @@ export const products: Product[] = [
     price: 549,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ca4d73, #f9c884)",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+    image: "/tops-modern.svg"
   },
   {
     id: "leggings-1",
@@ -402,6 +402,6 @@ export const products: Product[] = [
     price: 399,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #424d88, #91c8e4)",
-    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+    image: "/leggings-modern.svg"
   }
 ];

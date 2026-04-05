@@ -1,0 +1,31 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="1006" cy="194" r="220" fill="#FFD4A8" fill-opacity="0.24"/>
+  <circle cx="214" cy="1210" r="278" fill="#CD6482" fill-opacity="0.18"/>
+  <rect x="78" y="78" width="1044" height="1344" rx="52" fill="url(#panel)" stroke="rgba(255,248,240,0.24)"/>
+  <circle cx="600" cy="332" r="100" fill="#F8D7C2"/>
+  <rect x="414" y="430" width="372" height="468" rx="154" fill="url(#top)"/>
+  <path d="M414 536C468 476 532 448 600 448C668 448 732 476 786 536" stroke="#FFF3EA" stroke-width="20" stroke-linecap="round"/>
+  <path d="M462 666H740" stroke="#FFF3EA" stroke-width="18" stroke-linecap="round" stroke-dasharray="1 34"/>
+  <path d="M470 760H730" stroke="#F5C370" stroke-width="22" stroke-linecap="round"/>
+  <rect x="124" y="120" width="188" height="50" rx="25" fill="#FFF4EA"/>
+  <text x="154" y="151" fill="#A24B68" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">TOPS EDIT</text>
+  <text x="118" y="1264" fill="#FFF8F0" font-family="Georgia, serif" font-size="90" font-weight="700">Trendy Everyday Top</text>
+  <text x="118" y="1330" fill="#FBE8DB" font-family="Arial, sans-serif" font-size="34">Minimal fashion artwork for a cleaner, younger, more modern store feel.</text>
+  <defs>
+    <linearGradient id="bg" x1="94" y1="58" x2="1028" y2="1428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7A3D58"/>
+      <stop offset="0.5" stop-color="#342137"/>
+      <stop offset="1" stop-color="#E6A06B"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="112" y1="110" x2="1030" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4EA" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="top" x1="414" y1="430" x2="786" y2="898" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9D8C2"/>
+      <stop offset="0.5" stop-color="#D77478"/>
+      <stop offset="1" stop-color="#A24B68"/>
+    </linearGradient>
+  </defs>
+</svg>

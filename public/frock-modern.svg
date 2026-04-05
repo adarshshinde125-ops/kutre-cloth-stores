@@ -1,0 +1,35 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="224" cy="216" r="190" fill="#FFD98B" fill-opacity="0.24"/>
+  <circle cx="960" cy="1210" r="300" fill="#F39A78" fill-opacity="0.2"/>
+  <rect x="78" y="78" width="1044" height="1344" rx="52" fill="url(#panel)" stroke="rgba(255,248,240,0.24)"/>
+  <circle cx="600" cy="370" r="104" fill="#FFD7C1"/>
+  <rect x="478" y="454" width="244" height="250" rx="122" fill="url(#bodice)"/>
+  <path d="M362 694C438 606 531 560 600 560C669 560 762 606 838 694L922 908C935 942 910 978 873 978H327C290 978 265 942 278 908L362 694Z" fill="url(#skirt)"/>
+  <path d="M430 808C507 858 686 858 770 798" stroke="#FFF4EC" stroke-width="20" stroke-linecap="round"/>
+  <path d="M414 892C500 938 696 938 788 876" stroke="#FFD98B" stroke-width="24" stroke-linecap="round"/>
+  <rect x="124" y="120" width="210" height="50" rx="25" fill="#FFF4EA"/>
+  <text x="154" y="151" fill="#C86251" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">FROCK STYLE</text>
+  <text x="118" y="1264" fill="#FFF8F0" font-family="Georgia, serif" font-size="90" font-weight="700">Floral Party Frock</text>
+  <text x="118" y="1330" fill="#FFEBDC" font-family="Arial, sans-serif" font-size="34">Playful, cheerful fashion artwork for girls festive and party sections.</text>
+  <defs>
+    <linearGradient id="bg" x1="108" y1="56" x2="1026" y2="1424" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BF5C54"/>
+      <stop offset="0.5" stop-color="#7D3842"/>
+      <stop offset="1" stop-color="#F1AA63"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="114" y1="108" x2="1028" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4EA" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="bodice" x1="478" y1="454" x2="722" y2="704" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDCC4"/>
+      <stop offset="1" stop-color="#F28A78"/>
+    </linearGradient>
+    <linearGradient id="skirt" x1="302" y1="620" x2="894" y2="972" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F05D71"/>
+      <stop offset="0.55" stop-color="#F38B72"/>
+      <stop offset="1" stop-color="#FFD37B"/>
+    </linearGradient>
+  </defs>
+</svg>

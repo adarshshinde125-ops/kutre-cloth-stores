@@ -1,0 +1,32 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="1000" cy="204" r="222" fill="#F3C89E" fill-opacity="0.28"/>
+  <circle cx="218" cy="1170" r="260" fill="#B45C6F" fill-opacity="0.22"/>
+  <rect x="76" y="76" width="1048" height="1348" rx="52" fill="url(#panel)" stroke="rgba(255,248,240,0.24)"/>
+  <rect x="436" y="282" width="328" height="772" rx="160" fill="url(#kurti)"/>
+  <rect x="398" y="446" width="404" height="118" rx="59" fill="#F7E8D6" fill-opacity="0.9"/>
+  <rect x="458" y="236" width="284" height="160" rx="80" fill="#F8D8BE"/>
+  <path d="M470 680C546 738 657 738 732 680" stroke="#FFF5ED" stroke-width="22" stroke-linecap="round"/>
+  <path d="M460 790H742" stroke="#FFF5ED" stroke-width="18" stroke-linecap="round" stroke-dasharray="1 36"/>
+  <path d="M462 886H740" stroke="#F5C16E" stroke-width="18" stroke-linecap="round"/>
+  <rect x="124" y="120" width="200" height="50" rx="25" fill="#FFF4EA"/>
+  <text x="154" y="151" fill="#87404E" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">KURTI EDIT</text>
+  <text x="118" y="1264" fill="#FFF8F0" font-family="Georgia, serif" font-size="92" font-weight="700">Printed Rayon Kurti</text>
+  <text x="118" y="1330" fill="#FAE8DB" font-family="Arial, sans-serif" font-size="34">Clean boutique-inspired artwork for modern everyday ladies wear.</text>
+  <defs>
+    <linearGradient id="bg" x1="76" y1="48" x2="1076" y2="1438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5C334B"/>
+      <stop offset="0.52" stop-color="#2E2032"/>
+      <stop offset="1" stop-color="#D58A63"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="114" y1="106" x2="1030" y2="1408" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7CDA8" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="kurti" x1="436" y1="282" x2="764" y2="1054" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5D4BD"/>
+      <stop offset="0.55" stop-color="#CF7B72"/>
+      <stop offset="1" stop-color="#8D4C6D"/>
+    </linearGradient>
+  </defs>
+</svg>
