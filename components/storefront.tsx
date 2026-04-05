@@ -251,8 +251,8 @@ export function Storefront() {
             </div>
             <div className="banner-card banner-card-two">
               <Image
-                src={products[3].image}
-                alt={products[3].names[language]}
+                src={products[4].image}
+                alt={dictionary.seasonSummerLabel}
                 fill
                 sizes="(max-width: 980px) 100vw, 24vw"
                 className="product-photo"
@@ -262,6 +262,43 @@ export function Storefront() {
                 <span>{dictionary.bannerCardTagTwo}</span>
                 <strong>{dictionary.bannerCardLabelTwo}</strong>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="season-grid">
+          <div className="season-card">
+            <div className="season-image-wrap">
+              <Image
+                src={products[0].image}
+                alt={dictionary.seasonFestiveLabel}
+                fill
+                sizes="(max-width: 980px) 100vw, 48vw"
+                className="product-photo"
+              />
+            </div>
+            <div className="season-copy">
+              <p className="section-kicker">{dictionary.seasonKicker}</p>
+              <h3>{dictionary.seasonTitle}</h3>
+              <strong>{dictionary.seasonFestiveLabel}</strong>
+              <p>{dictionary.seasonFestiveText}</p>
+            </div>
+          </div>
+          <div className="season-card">
+            <div className="season-image-wrap">
+              <Image
+                src={products[4].image}
+                alt={dictionary.seasonSummerLabel}
+                fill
+                sizes="(max-width: 980px) 100vw, 48vw"
+                className="product-photo"
+              />
+            </div>
+            <div className="season-copy">
+              <p className="section-kicker">{dictionary.seasonKicker}</p>
+              <h3>{dictionary.seasonSummerLabel}</h3>
+              <strong>{dictionary.productCategories.tops}</strong>
+              <p>{dictionary.seasonSummerText}</p>
             </div>
           </div>
         </section>

@@ -136,6 +136,12 @@ export const translations = {
     bannerCardLabelTwo: "Kids Festive Looks",
     bannerCardTagOne: "Boutique Finish",
     bannerCardTagTwo: "Fresh Weekly Picks",
+    seasonKicker: "Season Edit",
+    seasonTitle: "Festive favourites and fresh summer picks",
+    seasonFestiveLabel: "Festive Spotlight",
+    seasonFestiveText: "Richer sarees and occasion-ready outfits for celebrations and family functions.",
+    seasonSummerLabel: "Summer Collection",
+    seasonSummerText: "Lighter colours and breezier looks for warm-weather shopping and daily wear.",
     detailTitle: "Product Details",
     detailBack: "Back to Home",
     detailOrder: "Order on WhatsApp",
@@ -261,6 +267,12 @@ export const translations = {
     bannerCardLabelTwo: "किड्स सणसुदी लूक्स",
     bannerCardTagOne: "बुटीक फिनिश",
     bannerCardTagTwo: "दर आठवड्याला नवीन स्टाइल्स",
+    seasonKicker: "सीझन एडिट",
+    seasonTitle: "सणसुदीच्या आवडी आणि उन्हाळ्याच्या ताज्या निवडी",
+    seasonFestiveLabel: "फेस्टिव्ह स्पॉटलाइट",
+    seasonFestiveText: "समारंभ, सण आणि कुटुंब फंक्शन्ससाठी उठावदार साड्या आणि आकर्षक आउटफिट्स.",
+    seasonSummerLabel: "समर कलेक्शन",
+    seasonSummerText: "उन्हाळ्यासाठी हलक्या रंगांचे, आरामदायी आणि फ्रेश लूक्स.",
     detailTitle: "प्रॉडक्ट तपशील",
     detailBack: "होमवर जा",
     detailOrder: "WhatsApp वर ऑर्डर करा",
@@ -297,7 +309,7 @@ export const products: Product[] = [
     sizes: [],
     theme: "linear-gradient(135deg, #b63258, #f1a24f)"
     ,
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+    image: "https://unsplash.com/photos/jFyEr_5d_7A/download?force=true&w=1200"
   },
   {
     id: "kurti-1",
@@ -318,7 +330,7 @@ export const products: Product[] = [
     price: 899,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #915f95, #f3c6b4)",
-    image: "https://images.unsplash.com/photo-1583391733981-8496f31734e3?auto=format&fit=crop&w=900&q=80"
+    image: "https://unsplash.com/photos/kN3tHdXDDrs/download?force=true&w=1200"
   },
   {
     id: "frock-1",
@@ -339,7 +351,7 @@ export const products: Product[] = [
     price: 799,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ff907a, #ffd57d)",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+    image: "https://unsplash.com/photos/1WGlPdlj_z0/download?force=true&w=1200"
   },
   {
     id: "kids-1",
@@ -360,7 +372,7 @@ export const products: Product[] = [
     price: 699,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #438d80, #bee5a6)",
-    image: "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80"
+    image: "https://unsplash.com/photos/WtSPHjn2DI4/download?force=true&w=1200"
   },
   {
     id: "tops-1",
@@ -381,7 +393,7 @@ export const products: Product[] = [
     price: 549,
     sizes: ["S", "M", "XL", "XXL"],
     theme: "linear-gradient(135deg, #ca4d73, #f9c884)",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+    image: "https://unsplash.com/photos/x_-RxRtf1lc/download?force=true&w=1200"
   },
   {
     id: "leggings-1",
