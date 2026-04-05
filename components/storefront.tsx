@@ -1,20 +1,37 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { BrandHeader } from "@/components/brand-header";
-import { phoneNumber, products, translations, type Language } from "@/data/store";
+import { phoneNumber, products, translations, type Language, type ProductCategory } from "@/data/store";
 
 type CartState = Record<string, number>;
+type CategoryFilter = ProductCategory | "all";
 
 export function Storefront() {
   const [language, setLanguage] = useState<Language>("en");
   const [cart, setCart] = useState<CartState>({});
+  const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [customerAddress, setCustomerAddress] = useState("");
   const [customerNote, setCustomerNote] = useState("");
 
   const dictionary = translations[language];
+  const categoryOptions: CategoryFilter[] = ["all", "sarees", "kurtis", "frocks", "kids", "tops", "leggings"];
+  const normalizedSearch = searchTerm.trim().toLowerCase();
+  const visibleProducts = products.filter((product) => {
+    const categoryMatch = activeCategory === "all" || product.key === activeCategory;
+    const searchMatch =
+      !normalizedSearch ||
+      product.names[language].toLowerCase().includes(normalizedSearch) ||
+      product.descriptions[language].toLowerCase().includes(normalizedSearch) ||
+      dictionary.productCategories[product.key].toLowerCase().includes(normalizedSearch);
+
+    return categoryMatch && searchMatch;
+  });
   const cartEntries = Object.entries(cart).filter(([, quantity]) => quantity > 0);
   const cartCount = cartEntries.reduce((sum, [, quantity]) => sum + quantity, 0);
   const total = cartEntries.reduce((sum, [productId, quantity]) => {
@@ -122,12 +139,16 @@ export function Storefront() {
             <p className="hero-kicker">{dictionary.heroKicker}</p>
             <h2>{dictionary.heroTitle}</h2>
             <p className="hero-text">{dictionary.heroText}</p>
+            <p className="hero-subtext">{dictionary.heroSubtext}</p>
             <div className="hero-buttons">
               <a href="#collections" className="primary-btn">
                 {dictionary.shopNow}
               </a>
               <a href="#order" className="secondary-btn">
                 {dictionary.howToOrder}
+              </a>
+              <a href={`tel:+91${phoneNumber.slice(2)}`} className="secondary-btn">
+                {dictionary.callNow}
               </a>
             </div>
             <div className="contact-strip">
@@ -136,6 +157,11 @@ export function Storefront() {
                 +91 90082 78110
               </a>
             </div>
+            <div className="trust-row">
+              <span>{dictionary.trustOne}</span>
+              <span>{dictionary.trustTwo}</span>
+              <span>{dictionary.trustThree}</span>
+            </div>
           </div>
 
           <div className="hero-card">
@@ -143,6 +169,8 @@ export function Storefront() {
             <div className="hero-card-art" aria-hidden="true">
               <span className="art-tag tag-one">{dictionary.ladiesWear}</span>
               <span className="art-tag tag-two">{dictionary.kidsWear}</span>
+              <div className="art-glow glow-one" />
+              <div className="art-glow glow-two" />
               <div className="art-swatch swatch-one" />
               <div className="art-swatch swatch-two" />
               <div className="art-swatch swatch-three" />
@@ -151,11 +179,66 @@ export function Storefront() {
               <h3>{dictionary.heroCardTitle}</h3>
               <p>{dictionary.heroCardText}</p>
             </div>
+            <div className="hero-stats">
+              <div>
+                <span>{dictionary.statsYearsLabel}</span>
+                <strong>{dictionary.statsYearsValue}</strong>
+              </div>
+              <div>
+                <span>{dictionary.statsOrdersLabel}</span>
+                <strong>{dictionary.statsOrdersValue}</strong>
+              </div>
+              <div>
+                <span>{dictionary.statsVisitLabel}</span>
+                <strong>{dictionary.statsVisitValue}</strong>
+              </div>
+            </div>
           </div>
         </section>
+        <div className="hero-marquee">
+          <span>{dictionary.productCategories.sarees}</span>
+          <span>{dictionary.productCategories.kurtis}</span>
+          <span>{dictionary.productCategories.frocks}</span>
+          <span>{dictionary.productCategories.kids}</span>
+          <span>{dictionary.productCategories.tops}</span>
+          <span>{dictionary.productCategories.leggings}</span>
+        </div>
       </header>
 
       <main>
+        <section className="banner-section">
+          <div className="banner-copy">
+            <p className="section-kicker">{dictionary.featured}</p>
+            <h2>{dictionary.bannerTitle}</h2>
+            <p>{dictionary.bannerText}</p>
+            <div className="trust-row">
+              <span>{dictionary.bannerChipOne}</span>
+              <span>{dictionary.bannerChipTwo}</span>
+              <span>{dictionary.bannerChipThree}</span>
+            </div>
+          </div>
+          <div className="banner-stack">
+            <div className="banner-card banner-card-one">
+              <Image
+                src={products[0].image}
+                alt={products[0].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 30vw"
+                className="product-photo"
+              />
+            </div>
+            <div className="banner-card banner-card-two">
+              <Image
+                src={products[3].image}
+                alt={products[3].names[language]}
+                fill
+                sizes="(max-width: 980px) 100vw, 24vw"
+                className="product-photo"
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="info-grid">
           <article className="info-card">
             <p className="info-label">{dictionary.visitUs}</p>
@@ -182,35 +265,90 @@ export function Storefront() {
           <div className="section-pill">{dictionary.placeholderNote}</div>
         </section>
 
+        <section className="filter-panel">
+          <div>
+            <p className="section-kicker">{dictionary.browseByCategory}</p>
+          </div>
+          <label className="search-field">
+            <span>{dictionary.searchLabel}</span>
+            <input
+              type="search"
+              placeholder={dictionary.searchPlaceholder}
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+            />
+          </label>
+          <div className="filter-chips">
+            {categoryOptions.map((category) => {
+              const label =
+                category === "all"
+                  ? dictionary.allProducts
+                  : dictionary.productCategories[category];
+
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  className={`filter-chip ${activeCategory === category ? "is-active" : ""}`}
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="catalog-layout">
           <div className="products-panel">
-            <div className="product-grid">
-              {products.map((product) => {
+            {visibleProducts.length ? (
+              <div className="product-grid">
+                {visibleProducts.map((product) => {
                 const sizeText = product.sizes.length
                   ? `${dictionary.sizePrefix}: ${product.sizes.join(", ")}`
                   : "";
 
                 return (
                   <article className="product-card" key={product.id}>
+                    <div className="product-image-wrap product-image-home">
+                      <Image
+                        src={product.image}
+                        alt={product.names[language]}
+                        fill
+                        sizes="(max-width: 980px) 100vw, 40vw"
+                        className="product-photo"
+                      />
+                    </div>
                     <div className="product-visual visual-pattern" style={{ background: product.theme }}>
-                      <span className="product-badge">
-                        {dictionary.productCategories[product.key]}
-                      </span>
+                      <div className="product-card-top">
+                        <span className="product-badge">
+                          {dictionary.productCategories[product.key]}
+                        </span>
+                        <span className="product-price-chip">{formatCurrency(product.price)}</span>
+                      </div>
                     </div>
                     <h3>{product.names[language]}</h3>
                     <p className="product-copy">{product.descriptions[language]}</p>
                     <p className="product-sizes">{sizeText}</p>
                     <div className="product-meta">
-                      <span className="product-price">{formatCurrency(product.price)}</span>
                       <span>{dictionary.productCategories[product.key]}</span>
+                      <span className="product-price">{formatCurrency(product.price)}</span>
                     </div>
-                    <button type="button" onClick={() => addToCart(product.id)}>
-                      {dictionary.addToCart}
-                    </button>
+                    <div className="product-actions">
+                      <button type="button" onClick={() => addToCart(product.id)}>
+                        {dictionary.addToCart}
+                      </button>
+                      <Link href={`/products/${product.slug}`} className="secondary-btn full-width">
+                        {dictionary.viewDetails}
+                      </Link>
+                    </div>
                   </article>
                 );
-              })}
-            </div>
+                })}
+              </div>
+            ) : (
+              <div className="empty-results">{dictionary.noResults}</div>
+            )}
           </div>
 
           <aside className="cart-panel">
@@ -282,6 +420,32 @@ export function Storefront() {
           </article>
         </section>
 
+        <section className="benefits-section">
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">{dictionary.benefitsKicker}</p>
+              <h2>{dictionary.benefitsTitle}</h2>
+            </div>
+          </div>
+          <div className="info-grid">
+            <article className="info-card">
+              <p className="info-label">01</p>
+              <h3>{dictionary.benefitOneTitle}</h3>
+              <p>{dictionary.benefitOneText}</p>
+            </article>
+            <article className="info-card">
+              <p className="info-label">02</p>
+              <h3>{dictionary.benefitTwoTitle}</h3>
+              <p>{dictionary.benefitTwoText}</p>
+            </article>
+            <article className="info-card">
+              <p className="info-label">03</p>
+              <h3>{dictionary.benefitThreeTitle}</h3>
+              <p>{dictionary.benefitThreeText}</p>
+            </article>
+          </div>
+        </section>
+
         <section id="order" className="order-section">
           <div className="order-copy">
             <p className="section-kicker">{dictionary.orderKicker}</p>
@@ -336,7 +500,43 @@ export function Storefront() {
             </button>
           </form>
         </section>
+
+        <section className="faq-section">
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">{dictionary.faqKicker}</p>
+              <h2>{dictionary.faqTitle}</h2>
+            </div>
+            <Link href="/contact" className="secondary-btn">
+              {dictionary.visitContact}
+            </Link>
+          </div>
+
+          <div className="faq-list">
+            <article className="faq-card">
+              <h3>{dictionary.faqOneQuestion}</h3>
+              <p>{dictionary.faqOneAnswer}</p>
+            </article>
+            <article className="faq-card">
+              <h3>{dictionary.faqTwoQuestion}</h3>
+              <p>{dictionary.faqTwoAnswer}</p>
+            </article>
+            <article className="faq-card">
+              <h3>{dictionary.faqThreeQuestion}</h3>
+              <p>{dictionary.faqThreeAnswer}</p>
+            </article>
+          </div>
+        </section>
       </main>
+
+      <a
+        className="floating-whatsapp"
+        href={`https://wa.me/${phoneNumber}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
     </div>
   );
 }
